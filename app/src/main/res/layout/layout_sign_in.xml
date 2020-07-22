@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_screen"
+    android:padding="16dp">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+        
+        <Button
+            android:id="@+id/btn_phone_sign_in"
+            android:padding="16dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_phone_black_24dp"
+            android:text="Telefon ile Giriş"
+            android:textColor="@android:color/black">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btn_google_sign_in"
+            android:padding="16dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/fui_ic_googleg_color_24dp"
+            android:text="Google ile Giriş"
+            android:textColor="@android:color/black">
+
+        </Button>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
