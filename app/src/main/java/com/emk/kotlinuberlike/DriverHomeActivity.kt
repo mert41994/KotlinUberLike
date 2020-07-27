@@ -157,6 +157,8 @@ class DriverHomeActivity : AppCompatActivity() {
                     avatarFolder.putFile(imageUri!!)
                         .addOnFailureListener{e ->
                             Snackbar.make(drawerLayout, e.message!!,Snackbar.LENGTH_LONG).show()
+                            waitingDialog.dismiss()
+
                         }.addOnCompleteListener{ task ->
                             if(task.isSuccessful)
                             {
@@ -165,12 +167,16 @@ class DriverHomeActivity : AppCompatActivity() {
                                     update_data["avatar"] = uri.toString()
 
                                     UserUtils.updateUser(drawerLayout, update_data)
+                                    waitingDialog.dismiss()
                                 }
                             }
 
                         }.addOnProgressListener { taskSnapshot ->
                             val progress = (100*taskSnapshot.bytesTransferred / taskSnapshot.totalByteCount)
                             waitingDialog.setMessage(StringBuilder("Yükleniyor:").append(" ").append(progress).append("%"))
+
+
+
 
                         }
                 }
